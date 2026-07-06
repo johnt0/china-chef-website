@@ -68,6 +68,18 @@ function Navbar() {
             >
                 <a
                     href="#top"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        if (window.location.hash) {
+                            history.pushState(
+                                null,
+                                '',
+                                window.location.pathname +
+                                    window.location.search,
+                            );
+                        }
+                    }}
                     className="flex items-center gap-3 no-underline
                         text-inherit transition-transform duration-300
                         ease-[cubic-bezier(0.22,0.61,0.36,1)]

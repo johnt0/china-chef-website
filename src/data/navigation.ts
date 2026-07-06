@@ -4,6 +4,7 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
+    { route: '#value', label: 'Value'},
     { route: '#menu', label: 'Menu' },
     { route: '#story', label: 'Story' },
     { route: '#visit', label: 'Visit' },
