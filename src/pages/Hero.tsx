@@ -38,7 +38,7 @@ function Hero() {
                     </span>
                     resh, generous, and made
                     <br />
-                    with <em className="text-brand-deep">family love.</em>
+                    with <em className="text-brand-deeper">family love.</em>
                 </h1>
                 <p
                     className="text-muted text-[clamp(15px,1.7vw,19px)]

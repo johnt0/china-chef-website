@@ -7,7 +7,8 @@
     /* Brand */
     --color-brand: #c1272d; /* primary red */
     --color-brand-dark: #9c1d22; /* red hover */
-    --color-brand-deep: #8c2f2a; /* darker warm-red accent (Hero em, Value lunch label, Navbar phone hover) */
+    --color-brand-deep: #8c2f2a; /* darker warm-red accent (Value lunch label, Navbar phone hover) */
+    --color-brand-deeper: #6b1f1a; /* deep brick-red — Hero "family love." em */
     --color-gold: #f7e9c8; /* logo/icon foreground */
 
     /* Text / neutrals */
@@ -156,7 +157,6 @@
     box-sizing: border-box;
 }
 html {
-    scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }

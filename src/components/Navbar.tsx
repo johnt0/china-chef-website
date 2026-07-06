@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import Logo from '../assets/logo.svg?react';
 import { navItems } from '../data/navigation';
 import { useActiveSection } from '../hooks/useActiveSection';
+import { animateScrollTo, scrollToElement } from '../utils/smoothScroll';
 
 const navRoutes = navItems.map((item) => item.route);
 
@@ -40,6 +41,30 @@ function Navbar() {
         return () => window.clearTimeout(timeout);
     }, [menuOpen]);
 
+    const navigateToSection = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        route: string,
+    ) => {
+        const isModifiedClick =
+            e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey;
+        if (isModifiedClick) return;
+        e.preventDefault();
+
+        const runScroll = () => {
+            const target = document.getElementById(route.slice(1));
+            scrollToElement(target, headerHeight + 16);
+        };
+
+        if (menuOpen) {
+            setMenuOpen(false);
+            window.setTimeout(runScroll, MENU_TRANSITION_MS);
+        } else {
+            runScroll();
+        }
+
+        history.pushState(null, '', route);
+    };
+
     useEffect(() => {
         if (!renderMenu) return;
         const prev = document.body.style.overflow;
@@ -70,7 +95,7 @@ function Navbar() {
                     href="#top"
                     onClick={(e) => {
                         e.preventDefault();
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        animateScrollTo(0);
                         if (window.location.hash) {
                             history.pushState(
                                 null,
@@ -115,6 +140,9 @@ function Navbar() {
                             <li key={item.route}>
                                 <a
                                     href={item.route}
+                                    onClick={(e) =>
+                                        navigateToSection(e, item.route)
+                                    }
                                     aria-current={isActive ? 'true' : undefined}
                                     className="link-underline no-underline
                                         font-semibold text-[15px] pb-[4px]
@@ -208,7 +236,9 @@ function Navbar() {
                                             : undefined
                                     }
                                     href={item.route}
-                                    onClick={() => setMenuOpen(false)}
+                                    onClick={(e) =>
+                                        navigateToSection(e, item.route)
+                                    }
                                     aria-current={
                                         active === item.route
                                             ? 'true'

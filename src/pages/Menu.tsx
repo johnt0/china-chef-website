@@ -5,6 +5,7 @@ import menuData from '../data/menu.json';
 import { CATEGORY_ICONS, DEFAULT_CATEGORY_ICON } from '../data/categoryIcons';
 import { priceOf, type Dish, type Category, type MenuData } from '../data/menuHelpers';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { animateScrollTo } from '../utils/smoothScroll';
 
 interface DisplayItem {
     key: string;
@@ -464,7 +465,7 @@ function Menu() {
         const offset = headerHeight + stickyBarHeight + 16;
         const top =
             target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
+        animateScrollTo(top);
     };
 
     const categories: DisplayCategory[] = mainCategories
