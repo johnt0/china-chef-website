@@ -4,6 +4,7 @@ import type { LucideIcon } from 'lucide-react';
 import menuData from '../data/menu.json';
 import { CATEGORY_ICONS, DEFAULT_CATEGORY_ICON } from '../data/categoryIcons';
 import { priceOf, type Dish, type Category, type MenuData } from '../data/menuHelpers';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 interface DisplayItem {
     key: string;
@@ -105,6 +106,45 @@ const chips = mainCategories.map((c) => ({
     id: slug(c.name),
     name: c.name,
 }));
+
+// Rough relative pixel weight of a rendered category card. Only used to
+// balance the two-column layout, so absolute accuracy doesn't matter — just
+// the ratios between categories of different sizes.
+function estimateCategoryHeight(cat: DisplayCategory): number {
+    const HEADER = 60; // card header row (icon + title + count)
+    const BODY = 26; // body top/bottom padding
+    const MARGIN = 16; // mb-4 gap below the card
+    const NOTE = 42; // note paragraph, when present
+    const ROW = 42; // one DishRow
+    const DETAIL = 18; // extra line when a dish has detail text
+    let h = HEADER + BODY + MARGIN + (cat.hasNote ? NOTE : 0);
+    for (const it of cat.items) h += ROW + (it.hasDetail ? DETAIL : 0);
+    return h;
+}
+
+// Greedily balance categories across `columnCount` columns, keeping menu
+// source order intact: each category is dropped into whichever column is
+// currently shortest. With columnCount === 1 everything lands in a single
+// bucket in original order (used on mobile).
+function packColumns(
+    cats: DisplayCategory[],
+    columnCount: number,
+): DisplayCategory[][] {
+    const cols: DisplayCategory[][] = Array.from(
+        { length: columnCount },
+        () => [],
+    );
+    const heights = new Array(columnCount).fill(0);
+    for (const cat of cats) {
+        let target = 0;
+        for (let i = 1; i < columnCount; i++) {
+            if (heights[i] < heights[target]) target = i;
+        }
+        cols[target].push(cat);
+        heights[target] += estimateCategoryHeight(cat);
+    }
+    return cols;
+}
 
 // Connector stopwords: dropped from both the query and the dish text after
 // normalization so their presence/absence never blocks a match (e.g. "w.",
@@ -213,6 +253,7 @@ function SearchInput({
                     border-[1.5px] border-input-border rounded-[14px]
                     bg-white text-ink
                     shadow-input
+                    transition-[border-color,box-shadow] duration-200
                     focus:outline-none focus:border-brand
                     focus:shadow-input-focus"
             />
@@ -222,7 +263,8 @@ function SearchInput({
                     aria-label="Clear search"
                     className="absolute right-2 top-1/2 -translate-y-1/2
                         bg-transparent border-none cursor-pointer
-                        text-[20px] leading-none text-icon-muted p-1.5"
+                        text-[20px] leading-none text-icon-muted p-1.5
+                        transition-colors duration-150 hover:text-brand"
                 >
                     &times;
                 </button>
@@ -235,7 +277,7 @@ function DishRow({ item }: { item: DisplayItem }) {
     return (
         <div
             className="group py-2 px-2.5 -mx-2.5 rounded-lg
-                border-b border-menu-item-border break-inside-avoid
+                border-b border-menu-item-border
                 transition-colors duration-200 ease-in-out
                 hover:bg-row-hover"
         >
@@ -332,7 +374,7 @@ function CategoryCard({
     return (
         <div
             id={cat.id}
-            className="scroll-mt-[220px] mb-4 break-inside-avoid
+            className="scroll-mt-[220px] mb-4
                 bg-white border border-line rounded-xl overflow-hidden"
         >
             <div
@@ -389,6 +431,7 @@ function Menu() {
     const [query, setQuery] = useState('');
     const [spicyOnly, setSpicyOnly] = useState(false);
     const stickyBarRef = useRef<HTMLDivElement>(null);
+    const isDesktop = useMediaQuery('(min-width: 768px)');
 
     const q = query.trim().toLowerCase();
     const hasQuery = q.length > 0;
@@ -443,6 +486,8 @@ function Menu() {
             };
         })
         .filter((c) => c.count > 0);
+
+    const columns = packColumns(categories, isDesktop ? 2 : 1);
 
     const totalResults = categories.reduce((n, c) => n + c.count, 0);
     const resultLabel =
@@ -502,13 +547,7 @@ function Menu() {
                                     text-[13px] font-semibold cursor-pointer
                                     py-[7px] px-[14px] rounded-full
                                     whitespace-nowrap border shadow-btn
-                                    transition-[transform,box-shadow]
-                                    duration-150
-                                    ease-[cubic-bezier(0.4,0,0.2,1)]
-                                    hover:-translate-y-[2px]
-                                    hover:shadow-btn-hover
-                                    active:translate-y-[1px]
-                                    active:shadow-btn-active ${
+                                    btn-press ${
                                         spicyOnly
                                             ? `bg-brand text-white
                                             border-brand`
@@ -548,16 +587,9 @@ function Menu() {
                                             border border-chip-border
                                             py-[7px] px-[14px]
                                             rounded-full whitespace-nowrap
-                                            shadow-btn
-                                            transition-[transform,box-shadow,color,border-color]
-                                            duration-150
-                                            ease-[cubic-bezier(0.4,0,0.2,1)]
-                                            hover:-translate-y-[2px]
-                                            hover:shadow-btn-hover
+                                            shadow-btn btn-press
                                             hover:border-brand
-                                            hover:text-brand
-                                            active:translate-y-[1px]
-                                            active:shadow-btn-active"
+                                            hover:text-brand"
                                     >
                                         {chip.name}
                                     </a>
@@ -590,20 +622,24 @@ function Menu() {
                                 className="text-sm font-semibold
                                     cursor-pointer py-[11px] px-[22px]
                                     rounded-lg bg-brand text-white
-                                    border-none"
+                                    border-none shadow-btn btn-press"
                             >
                                 Clear filters
                             </button>
                         </div>
                     )}
 
-                    <div className="columns-1 md:columns-2 gap-x-6">
-                        {categories.map((cat) => (
-                            <CategoryCard
-                                key={cat.id}
-                                cat={cat}
-                                animKey={animKey}
-                            />
+                    <div className="flex flex-col md:flex-row gap-x-6">
+                        {columns.map((col, i) => (
+                            <div key={i} className="flex-1 min-w-0">
+                                {col.map((cat) => (
+                                    <CategoryCard
+                                        key={cat.id}
+                                        cat={cat}
+                                        animKey={animKey}
+                                    />
+                                ))}
+                            </div>
                         ))}
                     </div>
                 </div>

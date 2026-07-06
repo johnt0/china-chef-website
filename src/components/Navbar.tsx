@@ -116,22 +116,9 @@ function Navbar() {
                                 <a
                                     href={item.route}
                                     aria-current={isActive ? 'true' : undefined}
-                                    className={`
-                    no-underline relative font-semibold text-[15px] pb-[4px]
-                    text-ink
-
-                    after:absolute after:bottom-0 after:left-0 after:h-[2px]
-                    after:w-full
-                    after:bg-brand after:scale-x-0 after:origin-left
-                    after:transition-transform after:duration-300
-                    after:ease-[cubic-bezier(0.22,0.61,0.36,1)]
-
-                    hover:after:scale-x-100
-                    focus-visible:after:scale-x-100
-                    focus-visible:outline-none
-
-                    ${isActive ? 'after:scale-x-100' : ''}
-                  `}
+                                    className="link-underline no-underline
+                                        font-semibold text-[15px] pb-[4px]
+                                        text-ink focus-visible:outline-none"
                                 >
                                     {item.label}
                                 </a>
@@ -141,9 +128,10 @@ function Navbar() {
                     <li>
                         <a
                             href="tel:+14108821088"
-                            className="inline-flex items-center gap-2
-                bg-brand text-white px-5 py-[11px] rounded no-underline
-                text-sm tabular-nums hover:bg-brand-deep transition-colors"
+                            className="btn-press shadow-btn inline-flex
+                                items-center gap-2 bg-brand text-white px-5
+                                py-[11px] rounded no-underline text-sm
+                                tabular-nums hover:bg-brand-deep"
                         >
                             410-882-1088
                         </a>

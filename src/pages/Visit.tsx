@@ -14,6 +14,7 @@ const ADDRESS_QUERY = ADDRESS.replaceAll(' ', '+');
 function LazyLoadMap() {
     const containerRef = useRef<HTMLDivElement>(null);
     const [shouldLoad, setShouldLoad] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
         const el = containerRef.current;
@@ -47,7 +48,10 @@ function LazyLoadMap() {
                     }
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="absolute inset-0 w-full h-full border-0"
+                    onLoad={() => setLoaded(true)}
+                    className={`absolute inset-0 w-full h-full border-0
+                        transition-opacity duration-300
+                        ${loaded ? 'opacity-100' : 'opacity-0'}`}
                 />
             ) : (
                 <div className="absolute inset-0" aria-hidden="true" />
@@ -92,11 +96,15 @@ function AddressRow() {
                     href={'https://www.google.com/maps?q=' + ADDRESS_QUERY}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 mt-2 text-[13.5px]
-                        font-semibold text-brand no-underline hover:underline
-                        whitespace-nowrap"
+                    className="link-underline group inline-flex items-center
+                        gap-1 mt-2 text-[13.5px] font-semibold text-brand
+                        no-underline whitespace-nowrap"
                 >
-                    Get directions <ArrowRight className="w-3.5 h-3.5" />
+                    Get directions{' '}
+                    <ArrowRight
+                        className="w-3.5 h-3.5 transition-transform
+                            duration-200 group-hover:translate-x-[3px]"
+                    />
                 </a>
             </div>
         </div>
@@ -171,6 +179,7 @@ function HoursRow() {
                         <span
                             className={`
                                 w-[8px] h-[8px] rounded-[50%] shrink-0 ${dot}
+                                ${status === 'open' ? 'animate-spicy-pulse' : ''}
                             `}
                             style={{
                                 boxShadow: `var(${ringVar}) 0px 0px 0px 3px`,
@@ -205,8 +214,9 @@ function PhoneRow() {
                 </h3>
                 <a
                     href={PHONE_HREF}
-                    className="text-[24px] font-medium tracking-tight
-                        tabular-nums text-brand no-underline leading-[1.1]"
+                    className="link-underline text-[24px] font-medium
+                        tracking-tight tabular-nums text-brand no-underline
+                        leading-[1.1]"
                 >
                     {PHONE_DISPLAY}
                 </a>

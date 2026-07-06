@@ -1,14 +1,18 @@
 import { navItems } from '../data/navigation';
 import Logo from '../assets/logo.svg?react';
+import { useReveal } from '../hooks/useReveal';
 function Footer() {
     const year = new Date().getFullYear();
+    const { ref, className } = useReveal<HTMLDivElement>();
 
     return (
         <footer id="Footer" className="bg-maroon text-cream-muted">
             <div
+                ref={ref}
                 className={`
                     max-w-[1080px] mx-auto pt-[clamp(44px,6vw,64px)]
                     px-[24px] pb-[clamp(26px,3vw,32px)] text-center
+                    ${className}
                 `}
             >
                 <div
@@ -52,7 +56,11 @@ function Footer() {
                 >
                     {navItems.map(({ route, label }) => (
                         <li key={route}>
-                            <a href={route} className="text-cream-muted">
+                            <a
+                                href={route}
+                                className="link-underline text-cream-muted
+                                    no-underline"
+                            >
                                 {label}
                             </a>
                         </li>

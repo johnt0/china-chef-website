@@ -4,6 +4,7 @@ import {
     getHoursStatus,
     type HoursStatus,
 } from '../data/hours';
+import { useReveal } from '../hooks/useReveal';
 
 type StatusStyle = { bg: string; dot: string; text: string; word: string };
 
@@ -32,6 +33,7 @@ function QuickInfo() {
     const status = getHoursStatus();
     const { bg, dot, text, word } = STATUS_STYLES[status];
     const message = getHoursMessage();
+    const reveal = useReveal<HTMLDivElement>();
 
     return (
         <section className="bg-quickinfo-bg">
@@ -40,10 +42,10 @@ function QuickInfo() {
                     pb-[clamp(40px,5vw,56px)]"
             >
                 <div
-                    data-reveal
-                    className="max-w-[640px] mx-auto bg-white border
+                    ref={reveal.ref}
+                    className={`max-w-[640px] mx-auto bg-white border
                         border-line rounded-[14px] overflow-hidden
-                        shadow-specials-card"
+                        shadow-specials-card ${reveal.className}`}
                 >
                     <div
                         className="p-[clamp(24px,3vw,32px)] flex flex-col
@@ -65,6 +67,7 @@ function QuickInfo() {
                                     className={`
                                         w-[8px] h-[8px] rounded-[50%]
                                         shrink-0 ${dot}
+                                        ${status === 'open' ? 'animate-spicy-pulse' : ''}
                                     `}
                                 />
                                 {word}
@@ -80,19 +83,19 @@ function QuickInfo() {
                             <span className="text-muted">
                                 Mon–Thu{' '}
                                 <span className="text-ink font-medium">
-                                    11a–10p
+                                    11am–10pm
                                 </span>
                             </span>
                             <span className="text-muted">
                                 Fri–Sat{' '}
                                 <span className="text-ink font-medium">
-                                    11a–11p
+                                    11am–11pm
                                 </span>
                             </span>
                             <span className="text-muted">
                                 Sun{' '}
                                 <span className="text-ink font-medium">
-                                    12p–10p
+                                    12pm–10pm
                                 </span>
                             </span>
                         </div>

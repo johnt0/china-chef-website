@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import menuData from '../data/menu.json';
 import { priceOf, type Dish, type Category, type MenuData } from '../data/menuHelpers';
+import { useReveal } from '../hooks/useReveal';
 
 const data = menuData as MenuData;
 
@@ -37,6 +38,8 @@ function displayItem(item: Dish): DisplayItem {
 
 function Value() {
     const [special, setSpecial] = useState<'lunch' | 'platter' | null>(null);
+    const intro = useReveal<HTMLDivElement>();
+    const specialsCard = useReveal<HTMLDivElement>(60);
 
     const now = new Date();
     const h = now.getHours() + now.getMinutes() / 60;
@@ -75,8 +78,9 @@ function Value() {
             >
                 {/* Intro text */}
                 <div
-                    data-reveal
-                    className="text-center max-w-[40em] m-[0_auto_32px]"
+                    ref={intro.ref}
+                    className={`text-center max-w-[40em] m-[0_auto_32px]
+                        ${intro.className}`}
                 >
                     {/* Eyebrow label */}
                     <div
@@ -127,11 +131,11 @@ function Value() {
                 </div>
                 {/* Specials card */}
                 <div
-                    data-reveal
-                    data-reveal-delay="60"
+                    ref={specialsCard.ref}
                     className={`
                         bg-white border border-line rounded-[14px]
                         shadow-specials-card overflow-hidden
+                        ${specialsCard.className}
                     `}
                 >
                     {/* Header row: tabs + spicy legend */}
@@ -152,9 +156,9 @@ function Value() {
                             <button
                                 onClick={() => setSpecial('lunch')}
                                 className={`
-                                    cursor-pointer text-[14.5px] font-bold
-                                    py-[10px] px-[20px] rounded-[6px]
-                                    transition-all duration-150
+                                    btn-press cursor-pointer text-[14.5px]
+                                    font-bold py-[10px] px-[20px]
+                                    rounded-[6px]
                                     ${
                                         isLunch
                                             ? 'bg-brand text-gold'
@@ -167,9 +171,9 @@ function Value() {
                             <button
                                 onClick={() => setSpecial('platter')}
                                 className={`
-                                    cursor-pointer text-[14.5px] font-bold
-                                    py-[10px] px-[20px] rounded-[6px]
-                                    transition-all duration-150
+                                    btn-press cursor-pointer text-[14.5px]
+                                    font-bold py-[10px] px-[20px]
+                                    rounded-[6px]
                                     ${
                                         !isLunch
                                             ? 'bg-brand text-gold'
@@ -262,7 +266,8 @@ function Value() {
                                         {item.spicy && (
                                             <span
                                                 className="text-chili
-                                                    text-[13px]"
+                                                    text-[13px]
+                                                    animate-spicy-pulse"
                                             >
                                                 ●
                                             </span>

@@ -137,8 +137,8 @@
                 {
                     "code": "20",
                     "name": "Wonton Egg Drop Mixed",
-                    "priceSm": "2.95",
-                    "priceLg": "4.95"
+                    "priceSm": "3.25",
+                    "priceLg": "5.75"
                 },
                 {
                     "code": "21",
@@ -150,7 +150,7 @@
                 {
                     "code": "22",
                     "name": "Vegetable Soup (For 2)",
-                    "price": "4.75"
+                    "price": "5.25"
                 },
                 {
                     "code": "23",
@@ -236,74 +236,78 @@
                 {
                     "code": "38",
                     "name": "Beef w. Bean Sprouts",
-                    "priceSm": "8.25",
-                    "priceLg": "12.95"
+                    "priceSm": "8.95",
+                    "priceLg": "13.95"
                 },
                 {
                     "code": "39",
                     "name": "Beef w. Black Bean Sauce",
-                    "priceSm": "8.25",
-                    "priceLg": "12.95"
+                    "priceSm": "8.95",
+                    "priceLg": "13.95"
                 },
                 {
                     "code": "40",
                     "name": "Pepper Steak w. Onion",
-                    "priceSm": "8.25",
-                    "priceLg": "12.95"
+                    "priceSm": "8.95",
+                    "priceLg": "13.95"
                 },
                 {
                     "code": "41",
                     "name": "Beef w. String Beans",
-                    "priceSm": "8.45",
-                    "priceLg": "12.95"
+                    "priceSm": "8.95",
+                    "priceLg": "13.95"
                 },
                 {
                     "code": "42",
                     "name": "Beef w. Mushroom",
-                    "priceSm": "8.25",
-                    "priceLg": "12.95"
+                    "priceSm": "8.95",
+                    "priceLg": "13.95"
                 },
                 {
                     "code": "43",
                     "name": "Beef w. Broccoli",
-                    "priceSm": "8.25",
-                    "priceLg": "12.95"
+                    "priceSm": "8.95",
+                    "priceLg": "13.95"
                 },
                 {
                     "code": "44",
                     "name": "Beef w. Snow Peas",
-                    "priceSm": "8.95",
+                    "priceSm": "9.25",
                     "priceLg": "13.95"
                 },
                 {
                     "code": "45",
                     "name": "Beef Hunan Style",
                     "spicy": true,
-                    "price": "12.95"
+                    "price": "13.95"
                 },
                 {
                     "code": "46",
                     "name": "Hot & Spicy Beef",
                     "spicy": true,
-                    "price": "12.95"
+                    "price": "13.95"
                 },
                 {
                     "code": "47",
                     "name": "Beef w. Garlic Sauce",
                     "spicy": true,
-                    "price": "12.95"
+                    "price": "13.95"
                 },
                 {
                     "code": "48",
                     "name": "Beef Szechuan Style",
                     "spicy": true,
-                    "price": "12.95"
+                    "price": "13.95"
                 },
-                { "code": "49", "name": "Beef w. Scallions", "price": "12.95" },
+                {
+                  "code": "49",
+                  "name": "Beef w. Scallions",
+                  "price": "13.95"
+                },
                 {
                     "code": "50",
                     "name": "Beef w. Mixed Vegetables",
-                    "price": "12.95"
+                    "price": "13.95"
                 }
             ]
         },

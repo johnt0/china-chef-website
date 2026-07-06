@@ -25,3 +25,8 @@ dist-ssr
 
 TODO.md
 notes.md
+
+.prettierignore
+.prettierrc.json
+
+.docs/*

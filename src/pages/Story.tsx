@@ -1,14 +1,18 @@
 import Logo from '../assets/logo.svg?react';
+import { useReveal } from '../hooks/useReveal';
 
 function Story() {
+    const { ref, className } = useReveal<HTMLDivElement>();
+
     return (
         <section
             id="story"
             className="scroll-mt-[88px] bg-maroon text-parchment"
         >
             <div
-                className="max-w-[760px] mx-auto
-                    py-[clamp(64px,_8vw,_110px)] px-6 text-center"
+                ref={ref}
+                className={`max-w-[760px] mx-auto
+                    py-[clamp(64px,_8vw,_110px)] px-6 text-center ${className}`}
             >
                 <div
                     className="flex items-center justify-center
