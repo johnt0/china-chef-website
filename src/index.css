@@ -88,6 +88,9 @@
     --shadow-badge: 0 10px 30px -8px rgba(193, 39, 45, 0.5);
     --shadow-input: 0 6px 18px -8px rgba(193, 39, 45, 0.28);
     --shadow-input-focus: 0 8px 22px -8px rgba(193, 39, 45, 0.4);
+    --shadow-btn: 0 4px 14px -4px rgba(193, 39, 45, 0.32);
+    --shadow-btn-hover: 0 12px 28px -8px rgba(193, 39, 45, 0.45);
+    --shadow-btn-active: 0 2px 8px -4px rgba(193, 39, 45, 0.28);
 
     /* Animations */
     --animate-acc-height: acc-height 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);

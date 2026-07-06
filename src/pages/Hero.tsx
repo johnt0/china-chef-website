@@ -56,7 +56,11 @@ function Hero() {
                         href="tel:+14108821088"
                         className="inline-flex items-center gap-[10px]
                             bg-brand text-white px-8 py-4 rounded no-underline
-                            text-[15.5px] font-medium"
+                            text-[15.5px] font-medium shadow-btn
+                            transition-[transform,box-shadow] duration-150
+                            ease-[cubic-bezier(0.4,0,0.2,1)]
+                            hover:-translate-y-[2px] hover:shadow-btn-hover
+                            active:translate-y-[1px] active:shadow-btn-active"
                         >
                         <Phone size={16}/>
                         Call to Order
@@ -66,7 +70,11 @@ function Hero() {
                             className="inline-flex items-center gap-[10px]
                                 bg-transparent text-ink px-8 py-4 rounded
                                 no-underline text-[15.5px] font-medium
-                                border-[1.5px] border-btn-border"
+                                border-[1.5px] border-btn-border shadow-btn
+                                transition-[transform,box-shadow]
+                                duration-150 ease-[cubic-bezier(0.4,0,0.2,1)]
+                                hover:-translate-y-[2px] hover:shadow-btn-hover
+                                active:translate-y-[1px] active:shadow-btn-active"
                         >
                             Browse Full Menu
                         </a>
