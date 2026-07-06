@@ -55,9 +55,11 @@ function Hero() {
                 </h1>
                 <p
                     className="text-muted text-[clamp(15px,1.7vw,19px)]
-                        leading-[1.7] max-w-[32em] mx-auto mb-9"
+                        leading-[1.7] max-w-[48em] mx-auto mb-9"
                 >
-                    Classic American &amp; Chinese cooking, made fresh to order.
+                    Classic American &amp; Chinese cooking, made fresh to
+                    order.{' '}
+                    <br className="hidden sm:block" />
                     Generous portions at a neighborhood price. Open 7 days a
                     week for pickup and delivery.
                 </p>
