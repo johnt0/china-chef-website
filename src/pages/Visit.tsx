@@ -205,8 +205,8 @@ function PhoneRow() {
                 </h3>
                 <a
                     href={PHONE_HREF}
-                    className="font-[Cormorant_Garamond,_serif] text-[30px]
-                        font-semibold text-brand no-underline leading-[1.1]"
+                    className="text-[24px] font-medium tracking-tight
+                        tabular-nums text-brand no-underline leading-[1.1]"
                 >
                     {PHONE_DISPLAY}
                 </a>

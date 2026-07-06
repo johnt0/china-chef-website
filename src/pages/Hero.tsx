@@ -17,7 +17,7 @@ function Hero() {
                         className="w-[26px] h-px bg-brand"
                     ></span>
                     <p
-                        className="text-brand text-[12.5px] tracking-[.2em]
+                        className="text-brand text-[clamp(0.75rem,3.5vw,1rem)] whitespace-nowrap tracking-wider
                         uppercase font-semibold"
                     >
                         Family Owned · Nottingham, MD
@@ -41,7 +41,7 @@ function Hero() {
                     with <em className="text-brand-deep">family love.</em>
                 </h1>
                 <p
-                    className="text-muted text-[clamp(16px,1.7vw,19px)]
+                    className="text-muted text-[clamp(15px,1.7vw,19px)]
                         leading-[1.7] max-w-[32em] mx-auto mb-9"
                 >
                     Classic American &amp; Chinese cooking, made fresh to order.

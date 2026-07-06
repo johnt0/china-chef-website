@@ -2,49 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Logo from '../assets/logo.svg?react';
 import { navItems } from '../data/navigation';
+import { useActiveSection } from '../hooks/useActiveSection';
 
 const navRoutes = navItems.map((item) => item.route);
-
-function useActiveSection(ids: string[], offset = 120) {
-    const [active, setActive] = useState('');
-
-    useEffect(() => {
-        const sections = ids
-            .map((id) => document.getElementById(id.slice(1)))
-            .filter((el): el is HTMLElement => el !== null);
-        if (sections.length === 0) return;
-
-        const intersecting = new Set<Element>();
-
-        const pickActive = () => {
-            const topmost = Array.from(intersecting).sort(
-                (a, b) =>
-                    a.getBoundingClientRect().top -
-                    b.getBoundingClientRect().top,
-            )[0];
-            setActive(topmost ? '#' + topmost.id : '');
-        };
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        intersecting.add(entry.target);
-                    } else {
-                        intersecting.delete(entry.target);
-                    }
-                });
-                pickActive();
-            },
-            { rootMargin: `-${offset}px 0px -60% 0px`, threshold: 0 },
-        );
-
-        sections.forEach((s) => observer.observe(s));
-        return () => observer.disconnect();
-    }, [ids, offset]);
-
-    return active;
-}
 
 const MENU_TRANSITION_MS = 280;
 
@@ -109,7 +69,9 @@ function Navbar() {
                 <a
                     href="#top"
                     className="flex items-center gap-3 no-underline
-                        text-inherit"
+                        text-inherit transition-transform duration-300
+                        ease-[cubic-bezier(0.22,0.61,0.36,1)]
+                        active:scale-95"
                 >
                     <div
                         className="flex items-center justify-center
@@ -134,10 +96,7 @@ function Navbar() {
                     </div>
                 </a>
 
-                <ul
-                    className="hidden md:flex items-center gap-8
-            font-[Cormorant_Garamond,_serif]"
-                >
+                <ul className="hidden md:flex items-center gap-8">
                     {navItems.map((item) => {
                         const isActive = active === item.route;
                         return (
@@ -172,7 +131,7 @@ function Navbar() {
                             href="tel:+14108821088"
                             className="inline-flex items-center gap-2
                 bg-brand text-white px-5 py-[11px] rounded no-underline
-                text-sm font-medium hover:bg-brand-deep transition-colors"
+                text-sm tabular-nums hover:bg-brand-deep transition-colors"
                         >
                             410-882-1088
                         </a>

@@ -105,11 +105,16 @@ function Value() {
                         <span className="w-[22px] h-px bg-divider-rose"></span>
                         <span
                             className={`
-                                text-[13px] tracking-[.16em] uppercase
+                                text-[clamp(0.75rem,3vw,1rem)]
+                                text-center
+                                tracking-wider uppercase
                                 font-bold text-brand-deep
                             `}
                         >
-                            Lunch Special · Mon–Sat · 11:00 AM – 3:00 PM
+                            Lunch Special
+                            <span className="hidden sm:inline"> · </span>
+                            <br className="sm:hidden" />
+                            Mon–Sat · 11:00 AM – 3:00 PM
                         </span>
                         <span className="w-[22px] h-px bg-divider-rose"></span>
                     </div>

@@ -207,7 +207,7 @@ function SearchInput({
                 type="search"
                 value={query}
                 onChange={onSearch}
-                placeholder="Search dishes — name or number…"
+                placeholder="Search dishes"
                 aria-label="Search menu items"
                 className="w-full text-[15.5px] py-[15px] px-11
                     border-[1.5px] border-input-border rounded-[14px]
@@ -498,10 +498,17 @@ function Menu() {
 
                             <button
                                 onClick={toggleSpicy}
-                                className={`inline-flex items-center gap-2
-                                    text-sm font-semibold cursor-pointer
-                                    py-[11px] px-[18px] rounded-lg
-                                    whitespace-nowrap border-[1.5px] ${
+                                className={`inline-flex items-center gap-1.5
+                                    text-[13px] font-semibold cursor-pointer
+                                    py-[7px] px-[14px] rounded-full
+                                    whitespace-nowrap border shadow-btn
+                                    transition-[transform,box-shadow]
+                                    duration-150
+                                    ease-[cubic-bezier(0.4,0,0.2,1)]
+                                    hover:-translate-y-[2px]
+                                    hover:shadow-btn-hover
+                                    active:translate-y-[1px]
+                                    active:shadow-btn-active ${
                                         spicyOnly
                                             ? `bg-brand text-white
                                             border-brand`
@@ -525,7 +532,7 @@ function Menu() {
                         {showChips && (
                             <div
                                 className="flex flex-nowrap gap-2
-                                    overflow-x-auto scrollbar-hide pt-[14px]
+                                    overflow-x-auto pt-[14px]
                                     pb-[24px] px-[2px]"
                             >
                                 {chips.map((chip) => (
@@ -541,8 +548,16 @@ function Menu() {
                                             border border-chip-border
                                             py-[7px] px-[14px]
                                             rounded-full whitespace-nowrap
+                                            shadow-btn
+                                            transition-[transform,box-shadow,color,border-color]
+                                            duration-150
+                                            ease-[cubic-bezier(0.4,0,0.2,1)]
+                                            hover:-translate-y-[2px]
+                                            hover:shadow-btn-hover
                                             hover:border-brand
-                                            hover:text-brand"
+                                            hover:text-brand
+                                            active:translate-y-[1px]
+                                            active:shadow-btn-active"
                                     >
                                         {chip.name}
                                     </a>
