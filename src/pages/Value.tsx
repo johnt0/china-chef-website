@@ -178,11 +178,11 @@ function Value() {
                         {/* Spicy legend */}
                         <div
                             className={`
-                                flex items-center gap-[8px] text-[13px]
+                                flex items-center pt-[1px] gap-[8px] text-[13px]
                                 text-ink-soft
                             `}
                         >
-                            <span className="text-chili text-[12px]">●</span>{' '}
+                            <span className="text-chili text-[12px] animate-spicy-pulse">●</span>{' '}
                             indicates a spicy dish
                         </div>
                     </div>

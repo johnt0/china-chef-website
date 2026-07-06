@@ -254,7 +254,7 @@ function DishRow({ item }: { item: DisplayItem }) {
                     {item.name}
                 </span>
                 {item.spicy && (
-                    <span className="text-chili text-[13px]">●</span>
+                    <span className="text-chili text-[13px] animate-spicy-pulse">●</span>
                 )}
                 {item.badgeLabel && item.badgeIcon && (
                     <span
@@ -477,7 +477,7 @@ function Menu() {
                     <p className="leading-[1.7] text-menu-desc">
                         Search by name or number, or jump to a section. Prices
                         shown small / large where offered. Entrées served with
-                        white rice. <span className="text-chili">●</span> spicy.
+                        white rice. <span className="text-chili animate-spicy-pulse">●</span> spicy.
                     </p>
                 </div>
 
