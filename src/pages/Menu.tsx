@@ -340,7 +340,7 @@ function CategoryCard({
                 />
                 <h3
                     className="font-[Cormorant_Garamond,_serif] text-[25px]
-                        font-semibold m-0 text-ink-strong flex-1"
+                        font-semibold m-0 text-ink-strong flex-1 min-w-0"
                 >
                     {cat.name}
                 </h3>
