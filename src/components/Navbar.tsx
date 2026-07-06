@@ -96,7 +96,8 @@ function Navbar() {
         <header
             ref={headerRef}
             className="sticky top-0 z-50 bg-cream/88 border-b
-                border-line backdrop-blur-md"
+                border-line backdrop-blur-md [transform:translateZ(0)]
+                [will-change:transform] [isolation:isolate]"
         >
             <nav
                 className="max-w-[clamp(1120px,_78vw,_1360px)] mx-auto
