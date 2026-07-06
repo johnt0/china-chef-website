@@ -1,9 +1,5 @@
 {
-    "reviewNotes": [
-        "Prices transcribed from phone photos (uploads/IMG_4170.jpeg, IMG_4171.jpeg) of the current physical menu, replacing the older, lower prices from the original watermarked CamScanner scans. Please do one proofread pass against the physical menu before publishing — small-digit misreads (e.g. 7 vs 8, 1 vs 7) are the main risk with phone-photo transcription of a price list.",
-        "Pork numbering skips #32 and #33 (goes 31 → 34), and Chef's Specialities skips S9 (goes S8 → S10) — confirmed present on the new, unobstructed photo too, so this is how the physical menu is numbered, not a scan defect.",
-        "Address: the physical menu lists 8623 Walther Blvd, Parkville, MD 21236, while the site's HTML comps say Nottingham, MD — still an open discrepancy to resolve with the client, separate from pricing."
-    ],
+    "reviewNotes": [],
     "categories": [
         {
             "name": "American & Chinese Special",
