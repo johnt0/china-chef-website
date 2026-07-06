@@ -518,7 +518,8 @@ function Menu() {
 
                         {showChips && (
                             <div
-                                className="flex flex-wrap gap-2 pt-[14px]
+                                className="flex flex-nowrap gap-2
+                                    overflow-x-auto scrollbar-hide pt-[14px]
                                     pb-[24px] px-[2px]"
                             >
                                 {chips.map((chip) => (
