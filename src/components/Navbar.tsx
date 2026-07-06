@@ -7,7 +7,7 @@ import { animateScrollTo, scrollToElement } from '../utils/smoothScroll';
 
 const navRoutes = navItems.map((item) => item.route);
 
-const MENU_TRANSITION_MS = 280;
+const MENU_TRANSITION_MS = 200;
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -216,7 +216,7 @@ function Navbar() {
                             style={{ top: headerHeight }}
                             className={`md:hidden fixed inset-x-0 bottom-0
                                 z-[60] bg-maroon/70 transition-opacity
-                                duration-300 ease-out
+                                duration-200 ease-out
                                 ${animateIn ? 'opacity-100' : 'opacity-0'}`}
                             onClick={() => setMenuOpen(false)}
                             aria-hidden="true"
@@ -231,7 +231,7 @@ function Navbar() {
                                 z-[70] w-[85%] max-w-[360px] bg-cream
                                 shadow-2xl flex flex-col px-6 py-6
                                 overflow-y-auto
-                                transition-transform duration-300 ease-out
+                                transition-transform duration-200 ease-out
                                 will-change-transform
                                 ${
                                     animateIn
@@ -258,14 +258,14 @@ function Navbar() {
                                     }
                                     style={{
                                         transitionDelay: animateIn
-                                            ? `${index * 30}ms`
+                                            ? `${index * 20}ms`
                                             : '0ms',
                                     }}
                                     className={`
                   no-underline text-ink font-[Cormorant_Garamond,_serif]
                   text-[30px]
                   py-[14px] border-b border-line block
-                  transition-[opacity,transform] duration-300 ease-out
+                  transition-[opacity,transform] duration-200 ease-out
                   ${
                       animateIn
                           ? 'opacity-100 translate-y-0'
@@ -282,14 +282,14 @@ function Navbar() {
                                 onClick={() => setMenuOpen(false)}
                                 style={{
                                     transitionDelay: animateIn
-                                        ? `${navItems.length * 30}ms`
+                                        ? `${navItems.length * 20}ms`
                                         : '0ms',
                                 }}
                                 className={`mt-6 text-center bg-brand
                                     text-white p-4 rounded no-underline
                                     text-base font-medium
                                     transition-[opacity,transform]
-                                    duration-300 ease-out
+                                    duration-200 ease-out
                                     ${
                                         animateIn
                                             ? 'opacity-100 translate-y-0'
