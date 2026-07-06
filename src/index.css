@@ -51,6 +51,8 @@
     --color-availability-bg: #fce9e6; /* Value specials card availability strip bg */
     --color-chip-border: #e9cdc9; /* menu chip / control borders */
     --color-header-hover: #fdf3f1; /* category header hover/open bg */
+    --color-row-hover: #fdf6f4; /* menu dish row hover background */
+    --color-panel-row-hover: #f6e3de; /* Value specials-card row hover bg (darker than special-panel) */
     --color-divider-soft: #f4dedb; /* Visit dividers + chevron badge bg */
     --color-input-border: #e0bdb8; /* search input + spicy-off border */
     --color-chili: #c0392b; /* spicy indicator dot (distinct from brand) */

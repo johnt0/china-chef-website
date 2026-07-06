@@ -208,7 +208,7 @@ function SearchInput({
                 value={query}
                 onChange={onSearch}
                 placeholder="Search dishes — name or number…"
-                aria-label="Search the menu"
+                aria-label="Search menu items"
                 className="w-full text-[15.5px] py-[15px] px-11
                     border-[1.5px] border-input-border rounded-[14px]
                     bg-white text-ink
@@ -234,8 +234,10 @@ function SearchInput({
 function DishRow({ item }: { item: DisplayItem }) {
     return (
         <div
-            className="py-2 border-b border-menu-item-border
-                break-inside-avoid"
+            className="group py-2 px-2.5 -mx-2.5 rounded-lg
+                border-b border-menu-item-border break-inside-avoid
+                transition-colors duration-200 ease-in-out
+                hover:bg-row-hover"
         >
             <div className="flex items-baseline gap-2.5">
                 {item.hasCode && (
@@ -276,7 +278,9 @@ function DishRow({ item }: { item: DisplayItem }) {
                 {item.hasSizedPrice ? (
                     <span
                         className="text-brand font-semibold text-[14.5px]
-                            whitespace-nowrap"
+                            whitespace-nowrap transition-transform
+                            duration-200 ease-in-out
+                            group-hover:-translate-x-[3px]"
                     >
                         <span
                             className="text-code-muted font-semibold
@@ -298,7 +302,9 @@ function DishRow({ item }: { item: DisplayItem }) {
                 ) : (
                     <span
                         className="text-brand font-semibold text-[14.5px]
-                            whitespace-nowrap"
+                            whitespace-nowrap transition-transform
+                            duration-200 ease-in-out
+                            group-hover:-translate-x-[3px]"
                     >
                         {item.price}
                     </span>

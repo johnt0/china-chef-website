@@ -226,8 +226,12 @@ function Value() {
                             {specialItems.map((item) => (
                                 <div
                                     key={item.key}
-                                    className="py-[9px] border-b
-                                        border-menu-item-border"
+                                    className="group py-[9px] px-2 -mx-2
+                                        rounded-lg border-b
+                                        border-menu-item-border
+                                        transition-colors duration-200
+                                        ease-in-out
+                                        hover:bg-panel-row-hover"
                                 >
                                     <div
                                         className="flex items-baseline
@@ -268,7 +272,10 @@ function Value() {
                                         <span
                                             className="text-brand
                                                 font-semibold text-[14.5px]
-                                                whitespace-nowrap"
+                                                whitespace-nowrap
+                                                transition-transform
+                                                duration-200 ease-in-out
+                                                group-hover:-translate-x-[3px]"
                                         >
                                             {item.price}
                                         </span>
