@@ -1,20 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { useMediaQuery } from './useMediaQuery';
 
-export function useReveal<T extends HTMLElement = HTMLDivElement>(
-    delayMs = 0,
-) {
+export function useReveal<T extends HTMLElement = HTMLDivElement>(delayMs = 0) {
     const ref = useRef<T>(null);
     const prefersReducedMotion = useMediaQuery(
         '(prefers-reduced-motion: reduce)',
     );
-    const [revealed, setRevealed] = useState(false);
+    const [observerRevealed, setObserverRevealed] = useState(false);
+    const revealed = observerRevealed || prefersReducedMotion;
 
     useEffect(() => {
-        if (prefersReducedMotion) {
-            setRevealed(true);
-            return;
-        }
+        if (prefersReducedMotion) return;
 
         const el = ref.current;
         if (!el) return;
@@ -25,7 +21,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     timeoutId = window.setTimeout(
-                        () => setRevealed(true),
+                        () => setObserverRevealed(true),
                         delayMs,
                     );
                     observer.disconnect();

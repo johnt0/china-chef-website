@@ -3,7 +3,12 @@ import { ChefHat as BadgeChefHat, Flame, Star } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import menuData from '../data/menu.json';
 import { CATEGORY_ICONS, DEFAULT_CATEGORY_ICON } from '../data/categoryIcons';
-import { priceOf, type Dish, type Category, type MenuData } from '../data/menuHelpers';
+import {
+    priceOf,
+    type Dish,
+    type Category,
+    type MenuData,
+} from '../data/menuHelpers';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 import { animateScrollTo } from '../utils/smoothScroll';
 
@@ -150,7 +155,17 @@ function packColumns(
 // Connector stopwords: dropped from both the query and the dish text after
 // normalization so their presence/absence never blocks a match (e.g. "w.",
 // "with", "and", "&" are all treated as the same non-meaningful glue word).
-const SEARCH_STOPWORDS = new Set(['with', 'w', 'and', 'n', 'in', 'on', 'the', 'a', 'of']);
+const SEARCH_STOPWORDS = new Set([
+    'with',
+    'w',
+    'and',
+    'n',
+    'in',
+    'on',
+    'the',
+    'a',
+    'of',
+]);
 
 // Lowercase and unify the various ways "with" shows up on the menu (the
 // literal abbreviation "w.", "w/", or "&") into one word, then strip all
@@ -189,7 +204,7 @@ function levenshtein(a: string, b: string): number {
             currRow[j] = Math.min(
                 prevRow[j] + 1, // deletion
                 currRow[j - 1] + 1, // insertion
-                prevRow[j - 1] + cost // substitution
+                prevRow[j - 1] + cost, // substitution
             );
         }
         [prevRow, currRow] = [currRow, prevRow];
@@ -203,7 +218,11 @@ function maxEditDistanceFor(tokenLength: number): number {
     return 2;
 }
 
-function tokenMatchesHaystack(token: string, haystack: string, haystackWords: string[]): boolean {
+function tokenMatchesHaystack(
+    token: string,
+    haystack: string,
+    haystackWords: string[],
+): boolean {
     if (haystack.includes(token)) return true;
 
     const maxDist = maxEditDistanceFor(token.length);
@@ -219,10 +238,14 @@ function matchesFilter(item: Dish, q: string, spicyOnly: boolean) {
     const tokens = meaningfulTokens(q);
     if (tokens.length === 0) return true;
 
-    const haystack = normalizeSearchText(item.name + ' ' + (item.code || '') + ' ' + (item.detail || ''));
+    const haystack = normalizeSearchText(
+        item.name + ' ' + (item.code || '') + ' ' + (item.detail || ''),
+    );
     const haystackWords = haystack.split(/\s+/).filter(Boolean);
 
-    return tokens.every((t) => tokenMatchesHaystack(t, haystack, haystackWords));
+    return tokens.every((t) =>
+        tokenMatchesHaystack(t, haystack, haystackWords),
+    );
 }
 
 function SearchInput({
@@ -297,7 +320,9 @@ function DishRow({ item }: { item: DisplayItem }) {
                     {item.name}
                 </span>
                 {item.spicy && (
-                    <span className="text-chili text-[13px] animate-spicy-pulse">●</span>
+                    <span className="text-chili text-[13px] animate-spicy-pulse">
+                        ●
+                    </span>
                 )}
                 {item.badgeLabel && item.badgeIcon && (
                     <span
@@ -509,7 +534,7 @@ function Menu() {
                 <div className="text-center max-w-[38em] mx-auto mb-[44px]">
                     <p
                         className="text-[12.5px] tracking-[.2em] uppercase
-                            text-brand font-semibold mb-[14px]"
+                            text-brand-dark font-semibold mb-[14px]"
                     >
                         The Full Menu
                     </p>
@@ -523,7 +548,11 @@ function Menu() {
                     <p className="leading-[1.7] text-menu-desc">
                         Search by name or number, or jump to a section. Prices
                         shown small / large where offered. Entrées served with
-                        white rice. <span className="text-chili animate-spicy-pulse">●</span> spicy.
+                        white rice.{' '}
+                        <span className="text-chili animate-spicy-pulse">
+                            ●
+                        </span>{' '}
+                        spicy.
                     </p>
                 </div>
 

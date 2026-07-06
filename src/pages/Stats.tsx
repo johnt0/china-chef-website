@@ -1,7 +1,5 @@
 function Stats() {
-    return (
-        <></>
-    )
+    return <></>;
 }
 
 export default Stats;
