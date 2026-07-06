@@ -1,0 +1,1329 @@
+{
+    "reviewNotes": [
+        "Prices transcribed from phone photos (uploads/IMG_4170.jpeg, IMG_4171.jpeg) of the current physical menu, replacing the older, lower prices from the original watermarked CamScanner scans. Please do one proofread pass against the physical menu before publishing — small-digit misreads (e.g. 7 vs 8, 1 vs 7) are the main risk with phone-photo transcription of a price list.",
+        "Pork numbering skips #32 and #33 (goes 31 → 34), and Chef's Specialities skips S9 (goes S8 → S10) — confirmed present on the new, unobstructed photo too, so this is how the physical menu is numbered, not a scan defect.",
+        "Address: the physical menu lists 8623 Walther Blvd, Parkville, MD 21236, while the site's HTML comps say Nottingham, MD — still an open discrepancy to resolve with the client, separate from pricing."
+    ],
+    "categories": [
+        {
+            "name": "American & Chinese Special",
+            "note": "Sides: Plain / French Fries or Fried Rice / Chicken or Pork Fried Rice / Beef or Shrimp Fried Rice",
+            "items": [
+                {
+                    "code": "A1",
+                    "name": "Fried Chicken Wings (3)",
+                    "pricePlain": "5.95",
+                    "priceFriedRice": "7.25",
+                    "pricePorkFriedRice": "7.95",
+                    "priceBeefOrShrimpFriedRice": "8.95"
+                },
+                {
+                    "code": "A2",
+                    "name": "Fried Jumbo Shrimp (5)",
+                    "pricePlain": "6.75",
+                    "priceFriedRice": "7.25",
+                    "pricePorkFriedRice": "7.95",
+                    "priceBeefOrShrimpFriedRice": "8.75"
+                },
+                {
+                    "code": "A3",
+                    "name": "Cheese Steak Egg Roll (1)",
+                    "pricePlain": "2.75"
+                },
+                {
+                    "code": "A4",
+                    "name": "Fried Scallops (Imitation) (10)",
+                    "pricePlain": "4.75",
+                    "priceFriedRice": "5.65",
+                    "pricePorkFriedRice": "6.75",
+                    "priceBeefOrShrimpFriedRice": "7.45"
+                },
+                {
+                    "code": "A5",
+                    "name": "Fried Chicken Nuggets (12)",
+                    "pricePlain": "5.75",
+                    "priceFriedRice": "6.75",
+                    "pricePorkFriedRice": "7.25",
+                    "priceBeefOrShrimpFriedRice": "7.95"
+                }
+            ]
+        },
+        {
+            "name": "Appetizer",
+            "items": [
+                { "code": "1", "name": "Pork Egg Roll", "price": "1.95" },
+                { "code": "2", "name": "Shrimp Egg Roll", "price": "2.05" },
+                {
+                    "code": "3",
+                    "name": "Crispy Spring Roll (2)",
+                    "price": "3.25"
+                },
+                {
+                    "code": "4",
+                    "name": "Krab Meat Rangoon (6)",
+                    "price": "5.95"
+                },
+                {
+                    "code": "5",
+                    "name": "Fried or Steamed Dumplings (Pork) (8)",
+                    "price": "6.95"
+                },
+                {
+                    "code": "6",
+                    "name": "Fried or Steamed Dumplings (Chicken) (8)",
+                    "price": "6.95"
+                },
+                {
+                    "code": "7",
+                    "name": "Fried or Steamed Dumplings (Shrimp)",
+                    "price": "7.95"
+                },
+                { "code": "8", "name": "Fried Wonton (12)", "price": "4.95" },
+                {
+                    "code": "9",
+                    "name": "Bar-B-Q Satay Steak (4)",
+                    "price": "7.95"
+                },
+                { "code": "10", "name": "Fantail Shrimp (3)", "price": "4.75" },
+                { "code": "11", "name": "Shrimp Toast (6)", "price": "6.35" },
+                {
+                    "code": "12",
+                    "name": "Boneless Ribs",
+                    "priceSm": "7.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "13",
+                    "name": "Bourbon Chicken",
+                    "priceSm": "7.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "14",
+                    "name": "Bar-B-Q Spare Ribs",
+                    "priceSm": "7.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "15",
+                    "name": "Bar-B-Q Chicken Stick (4)",
+                    "price": "6.95"
+                },
+                {
+                    "code": "16",
+                    "name": "Pu Pu Platter (For 2)",
+                    "detail": "2 Egg rolls, 2 chicken wings, 2 teriyaki beef, 2 fantail shrimps, 2 bar-b-q ribs, 2 fried wontons, 2 shrimp toast",
+                    "price": "14.95"
+                },
+                {
+                    "code": "17",
+                    "name": "Soy Bean Edamame",
+                    "priceSm": "4.75",
+                    "priceLg": "6.95"
+                }
+            ]
+        },
+        {
+            "name": "Soup",
+            "items": [
+                {
+                    "code": "18",
+                    "name": "Egg Drop Soup",
+                    "priceSm": "2.75",
+                    "priceLg": "4.25"
+                },
+                {
+                    "code": "19",
+                    "name": "Wonton Soup",
+                    "priceSm": "2.75",
+                    "priceLg": "4.25"
+                },
+                {
+                    "code": "20",
+                    "name": "Wonton Egg Drop Mixed",
+                    "priceSm": "2.95",
+                    "priceLg": "4.95"
+                },
+                {
+                    "code": "21",
+                    "name": "Hot & Sour Soup",
+                    "spicy": true,
+                    "priceSm": "2.75",
+                    "priceLg": "4.25"
+                },
+                {
+                    "code": "22",
+                    "name": "Vegetable Soup (For 2)",
+                    "price": "4.75"
+                },
+                {
+                    "code": "23",
+                    "name": "Triple Delight Soup (For 2)",
+                    "price": "6.95"
+                },
+                {
+                    "code": "24",
+                    "name": "Chicken Rice or Noodle Soup",
+                    "priceSm": "2.75",
+                    "priceLg": "4.25"
+                },
+                {
+                    "code": "25",
+                    "name": "Seafood Soup (For 2)",
+                    "price": "7.95"
+                }
+            ]
+        },
+        {
+            "name": "Pork",
+            "note": "w. White Rice",
+            "items": [
+                {
+                    "code": "26",
+                    "name": "Roast Pork w. Bean Sprouts",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "27",
+                    "name": "Roast Pork w. Black Bean Sauce",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "28",
+                    "name": "Roast Pork w. Mushrooms",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "29",
+                    "name": "Roast Pork w. Broccoli",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "30",
+                    "name": "Roast Pork w. Snow Peas",
+                    "priceSm": "8.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "31",
+                    "name": "Double Sauteed Sliced Pork",
+                    "spicy": true,
+                    "price": "11.95"
+                },
+                {
+                    "code": "34",
+                    "name": "Sliced Pork w. Mixed Vegetables",
+                    "price": "11.95"
+                },
+                {
+                    "code": "35",
+                    "name": "Pork Hunan Style",
+                    "spicy": true,
+                    "price": "11.95"
+                },
+                {
+                    "code": "36",
+                    "name": "Moo Shu Pork (Pancakes no rice)",
+                    "price": "11.95"
+                },
+                { "code": "37", "name": "Sweet & Sour Pork", "price": "11.95" }
+            ]
+        },
+        {
+            "name": "Beef",
+            "note": "w. White Rice",
+            "items": [
+                {
+                    "code": "38",
+                    "name": "Beef w. Bean Sprouts",
+                    "priceSm": "8.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "39",
+                    "name": "Beef w. Black Bean Sauce",
+                    "priceSm": "8.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "40",
+                    "name": "Pepper Steak w. Onion",
+                    "priceSm": "8.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "41",
+                    "name": "Beef w. String Beans",
+                    "priceSm": "8.45",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "42",
+                    "name": "Beef w. Mushroom",
+                    "priceSm": "8.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "43",
+                    "name": "Beef w. Broccoli",
+                    "priceSm": "8.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "44",
+                    "name": "Beef w. Snow Peas",
+                    "priceSm": "8.95",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "45",
+                    "name": "Beef Hunan Style",
+                    "spicy": true,
+                    "price": "12.95"
+                },
+                {
+                    "code": "46",
+                    "name": "Hot & Spicy Beef",
+                    "spicy": true,
+                    "price": "12.95"
+                },
+                {
+                    "code": "47",
+                    "name": "Beef w. Garlic Sauce",
+                    "spicy": true,
+                    "price": "12.95"
+                },
+                {
+                    "code": "48",
+                    "name": "Beef Szechuan Style",
+                    "spicy": true,
+                    "price": "12.95"
+                },
+                { "code": "49", "name": "Beef w. Scallions", "price": "12.95" },
+                {
+                    "code": "50",
+                    "name": "Beef w. Mixed Vegetables",
+                    "price": "12.95"
+                }
+            ]
+        },
+        {
+            "name": "Seafood",
+            "note": "w. White Rice",
+            "items": [
+                {
+                    "code": "51",
+                    "name": "Shrimp w. Bean Sprouts",
+                    "priceSm": "8.45",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "52",
+                    "name": "Shrimp w. Black Bean Sauce",
+                    "priceSm": "8.45",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "53",
+                    "name": "Shrimp w. Lobster Sauce",
+                    "priceSm": "8.45",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "54",
+                    "name": "Shrimp w. Broccoli",
+                    "priceSm": "8.45",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "55",
+                    "name": "Shrimp w. Snow Peas",
+                    "priceSm": "8.95",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "56",
+                    "name": "Kung Po Shrimp w. Peanuts",
+                    "spicy": true,
+                    "priceSm": "8.45",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "57",
+                    "name": "Shrimp w. Garlic Sauce",
+                    "spicy": true,
+                    "price": "13.95"
+                },
+                {
+                    "code": "58",
+                    "name": "Shrimp w. Szechuan Style",
+                    "spicy": true,
+                    "priceSm": "8.45",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "59",
+                    "name": "Shrimp w. Cashew Nuts",
+                    "priceSm": "8.95",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "60",
+                    "name": "Shrimp w. Chili Sauce",
+                    "spicy": true,
+                    "price": "13.95"
+                },
+                {
+                    "code": "61",
+                    "name": "Shrimp w. Mixed Vegetables",
+                    "price": "13.95"
+                },
+                {
+                    "code": "62",
+                    "name": "Scallop w. Garlic Sauce",
+                    "spicy": true,
+                    "price": "14.95"
+                },
+                {
+                    "code": "63",
+                    "name": "Scallops w. Mixed Vegetables",
+                    "price": "13.95"
+                },
+                {
+                    "code": "64",
+                    "name": "Shrimp Hunan Style",
+                    "spicy": true,
+                    "price": "13.95"
+                },
+                {
+                    "code": "65",
+                    "name": "Curry Shrimp w. Onion",
+                    "priceSm": "8.45",
+                    "priceLg": "13.95"
+                },
+                {
+                    "code": "66",
+                    "name": "Shrimp w. String Beans",
+                    "priceSm": "8.45",
+                    "priceLg": "13.95"
+                }
+            ]
+        },
+        {
+            "name": "Side Order",
+            "items": [
+                {
+                    "name": "Plain Fried Rice",
+                    "priceSm": "3.95",
+                    "priceLg": "5.95"
+                },
+                {
+                    "name": "Steamed Rice",
+                    "priceSm": "2.50",
+                    "priceLg": "3.95"
+                },
+                { "name": "Fortune Cookies (5)", "price": "1.25" },
+                { "name": "Fried Crispy Noodles (1)", "price": "1.00" },
+                { "name": "French Fries", "priceSm": "3.00", "priceLg": "5.95" }
+            ]
+        },
+        {
+            "name": "Chicken/Poultry",
+            "note": "w. White Rice",
+            "items": [
+                {
+                    "code": "67",
+                    "name": "Moo Shu Chicken (Pancakes no rice)",
+                    "price": "11.95"
+                },
+                {
+                    "code": "68",
+                    "name": "Chicken w. Black Bean Sauce",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "69",
+                    "name": "Moo Goo Gai Pan",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "70",
+                    "name": "Chicken w. Broccoli",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "71",
+                    "name": "Curry Chicken w. Onion",
+                    "spicy": true,
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "72",
+                    "name": "Chicken w. Snow Peas",
+                    "priceSm": "8.95",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "73",
+                    "name": "Chicken Hunan Style",
+                    "spicy": true,
+                    "price": "11.95"
+                },
+                {
+                    "code": "74",
+                    "name": "Kung Po Chicken",
+                    "spicy": true,
+                    "priceSm": "8.25",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "75",
+                    "name": "Chicken w. Garlic Sauce",
+                    "spicy": true,
+                    "price": "11.95"
+                },
+                {
+                    "code": "76",
+                    "name": "Chicken w. Szechuan Style",
+                    "spicy": true,
+                    "price": "11.95"
+                },
+                {
+                    "code": "77",
+                    "name": "Diced Chicken w. Cashew Nuts",
+                    "priceSm": "8.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "78",
+                    "name": "Hot & Spicy Chicken",
+                    "spicy": true,
+                    "price": "11.95"
+                },
+                {
+                    "code": "79",
+                    "name": "Chicken & Shrimp Combination Sauteed",
+                    "price": "12.95"
+                },
+                {
+                    "code": "80",
+                    "name": "Chicken w. Mixed Veg",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "81",
+                    "name": "Chicken w. String Beans",
+                    "priceSm": "8.25",
+                    "priceLg": "12.95"
+                },
+                {
+                    "code": "82",
+                    "name": "Sweet & Sour Chicken",
+                    "price": "11.95"
+                }
+            ]
+        },
+        {
+            "name": "Vegetable",
+            "note": "w. White Rice",
+            "items": [
+                { "code": "83", "name": "Mixed Vegetables", "price": "9.95" },
+                {
+                    "code": "84",
+                    "name": "Kung Po Bean Curd",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "85",
+                    "name": "Szechuan String Bean",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "86",
+                    "name": "Broccoli w. Garlic Sauce",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "87",
+                    "name": "Broccoli w. Mushrooms",
+                    "price": "9.95"
+                },
+                {
+                    "code": "88",
+                    "name": "Bean Curd Home Style",
+                    "price": "9.95"
+                },
+                {
+                    "code": "89",
+                    "name": "Bean Curd w. Black Bean Sauce",
+                    "price": "9.95"
+                },
+                {
+                    "code": "90",
+                    "name": "Mixed Vegetables w. Garlic Sauce",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "91",
+                    "name": "Bean Curd w. Broccoli",
+                    "price": "9.95"
+                },
+                {
+                    "code": "92",
+                    "name": "General Tso's Tofu",
+                    "spicy": true,
+                    "price": "9.95"
+                }
+            ]
+        },
+        {
+            "name": "Diet Menu",
+            "note": "w. White Rice. Served without: oil, corn starch, sugar, salt. All dishes served steamed.",
+            "items": [
+                {
+                    "code": "H1",
+                    "name": "Steamed Mixed Vegetables",
+                    "price": "9.95"
+                },
+                {
+                    "code": "H2",
+                    "name": "Chicken w. Broccoli",
+                    "price": "12.95"
+                },
+                {
+                    "code": "H3",
+                    "name": "Shrimp w. Snow Peas",
+                    "price": "13.95"
+                },
+                {
+                    "code": "H4",
+                    "name": "Chicken w. Mixed Vegetables",
+                    "price": "12.95"
+                },
+                {
+                    "code": "H5",
+                    "name": "Shrimp w. Broccoli",
+                    "price": "13.95"
+                },
+                {
+                    "code": "H6",
+                    "name": "Scallop w. Mixed Vegetables",
+                    "price": "14.95"
+                },
+                {
+                    "code": "H7",
+                    "name": "Scallop w. Broccoli",
+                    "price": "15.95"
+                },
+                {
+                    "code": "H8",
+                    "name": "Shrimp, Scallop, Chicken w. Mixed Vegs",
+                    "price": "15.95"
+                },
+                {
+                    "code": "H9",
+                    "name": "Shrimp w. Mixed Vegetables",
+                    "price": "14.95"
+                },
+                {
+                    "code": "H10",
+                    "name": "Chicken w. Snow Peas",
+                    "price": "13.95"
+                },
+                { "code": "H11", "name": "Steamed Broccoli", "price": "9.95" }
+            ]
+        },
+        {
+            "name": "Chef's Specialities",
+            "note": "w. White Rice",
+            "items": [
+                {
+                    "code": "S1",
+                    "name": "Seafood Delight",
+                    "detail": "Krab meat, jumbo shrimp, fresh scallop deliciously sauteed w. assorted Chinese vegetables in special white sauce.",
+                    "price": "15.95"
+                },
+                {
+                    "code": "S2",
+                    "name": "Shanghai Shrimp",
+                    "detail": "Jumbo shrimp w. mixed vegetables in white sauce.",
+                    "price": "13.95"
+                },
+                {
+                    "code": "S3",
+                    "name": "Sweet & Sour Shrimp",
+                    "detail": "Jumbo shrimp marinated w. pineapple sweet & sour sauce.",
+                    "price": "13.95"
+                },
+                {
+                    "code": "S4",
+                    "name": "Triple Delight",
+                    "detail": "Beef, chicken & shrimp sauteed w. broccoli, snow pea, bamboo shoots and baby corn w. chef's special sauce.",
+                    "price": "13.95"
+                },
+                {
+                    "code": "S5",
+                    "name": "Beef w. Fresh Scallops",
+                    "detail": "Beef and scallops w. assorted Chinese vegetables, served w. our chef's special sauce.",
+                    "price": "16.95"
+                },
+                {
+                    "code": "S6",
+                    "name": "House Special Pan Fried Noodles",
+                    "detail": "Shrimp, chicken, pork w. selected vegetables on top of pan fried noodles.",
+                    "price": "14.95"
+                },
+                {
+                    "code": "S7",
+                    "name": "Orange Flavor Chicken",
+                    "spicy": true,
+                    "detail": "Deep fried chunk chicken, delicately sauteed in orange sauce.",
+                    "price": "11.95"
+                },
+                {
+                    "code": "S8",
+                    "name": "Golden Sesame Chicken",
+                    "spicy": true,
+                    "detail": "Deep fried chunks of chicken in sesame brown sauce.",
+                    "price": "11.95"
+                },
+                {
+                    "code": "S10",
+                    "name": "Four Season",
+                    "detail": "Shrimp, roast pork, sliced beef, white meat chicken & Chinese vegetables sauteed w. chef's special sauce.",
+                    "price": "13.95"
+                },
+                {
+                    "code": "S11",
+                    "name": "Hunan Shrimp & Beef",
+                    "detail": "Shrimp & beef w. brown sauce, Hunan style.",
+                    "price": "15.95"
+                },
+                {
+                    "code": "S12",
+                    "name": "General Tso's Chicken",
+                    "spicy": true,
+                    "detail": "Chunks of chicken lightly fried w. hot bean sauce. This plate was devised by a private chef of General Tso's who was famous in the Szechuan army.",
+                    "price": "11.95"
+                },
+                {
+                    "code": "S13",
+                    "name": "Orange Flavor Beef",
+                    "spicy": true,
+                    "detail": "Tender filets of marinated beef, delicately sauteed and seasoned w. imported orange peels.",
+                    "price": "15.95"
+                },
+                {
+                    "code": "S14",
+                    "name": "Sesame Beef",
+                    "detail": "Deep fried chunks of beef in sesame brown sauce, served w. broccoli.",
+                    "price": "15.95"
+                },
+                {
+                    "code": "S15",
+                    "name": "Lemon Chicken",
+                    "detail": "Fried breaded chicken w. lemon flavored sauce on the side.",
+                    "price": "11.95"
+                },
+                {
+                    "code": "S16",
+                    "name": "Happy Family",
+                    "detail": "Beef, chicken, krab meat, shrimp & roast pork w. mixed vegetables.",
+                    "price": "16.95"
+                },
+                {
+                    "code": "S17",
+                    "name": "Butterfly Shrimp w. Bacon",
+                    "detail": "Pan fried jumbo shrimp w. bacon, served w. onion in tomato sauce.",
+                    "price": "14.95"
+                },
+                {
+                    "code": "S18",
+                    "name": "Dragon & Phoenix",
+                    "spicy": true,
+                    "detail": "Spicy stir-fried jumbo shrimp & General Tso's chicken.",
+                    "price": "13.95"
+                },
+                {
+                    "code": "S19",
+                    "name": "Twin Broccoli",
+                    "detail": "Chicken & shrimp with broccoli brown sauce.",
+                    "price": "13.95"
+                },
+                { "code": "S20", "name": "Mongolian Beef", "price": "14.95" },
+                {
+                    "code": "S21",
+                    "name": "Fresh Scallops & Shrimp w. Hot Garlic Sauce",
+                    "spicy": true,
+                    "detail": "Fresh scallops & jumbo shrimp with hot garlic sauce.",
+                    "price": "16.95"
+                },
+                {
+                    "code": "S22",
+                    "name": "Triple Crown w. Garlic Sauce",
+                    "spicy": true,
+                    "detail": "Garden vegetable w. sliced chicken, beef, shrimp, sauteed in our garlic sauce.",
+                    "price": "15.95"
+                },
+                {
+                    "code": "S23",
+                    "name": "General Tso's Shrimp or Orange Shrimp",
+                    "spicy": true,
+                    "price": "15.95"
+                }
+            ]
+        },
+        {
+            "name": "Fried Rice",
+            "items": [
+                {
+                    "code": "93",
+                    "name": "Roast Pork Fried Rice",
+                    "priceSm": "6.95",
+                    "priceLg": "9.95"
+                },
+                {
+                    "code": "94",
+                    "name": "Chicken Fried Rice",
+                    "priceSm": "6.95",
+                    "priceLg": "9.95"
+                },
+                {
+                    "code": "95",
+                    "name": "Vegetable Fried Rice",
+                    "priceSm": "6.25",
+                    "priceLg": "9.25"
+                },
+                {
+                    "code": "96",
+                    "name": "Shrimp Fried Rice",
+                    "priceSm": "7.95",
+                    "priceLg": "10.95"
+                },
+                {
+                    "code": "97",
+                    "name": "Beef Fried Rice",
+                    "priceSm": "7.95",
+                    "priceLg": "10.95"
+                },
+                {
+                    "code": "98",
+                    "name": "House Special Fried Rice",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                }
+            ]
+        },
+        {
+            "name": "Egg Foo Young",
+            "note": "w. White Rice",
+            "items": [
+                {
+                    "code": "99",
+                    "name": "Chicken Egg Foo Young",
+                    "price": "9.95"
+                },
+                {
+                    "code": "100",
+                    "name": "Roast Pork Egg Foo Young",
+                    "price": "9.95"
+                },
+                {
+                    "code": "101",
+                    "name": "Shrimp Egg Foo Young",
+                    "price": "10.95"
+                },
+                {
+                    "code": "102",
+                    "name": "Beef Egg Foo Young",
+                    "price": "10.95"
+                },
+                {
+                    "code": "103",
+                    "name": "House Special Egg Foo Young",
+                    "price": "11.95"
+                },
+                {
+                    "code": "104",
+                    "name": "Vegetable Egg Foo Young",
+                    "price": "9.95"
+                }
+            ]
+        },
+        {
+            "name": "Chow Mein or Chop Suey",
+            "note": "w. White Rice & Fried Noodle for Chow Mein",
+            "items": [
+                {
+                    "code": "105",
+                    "name": "Roast Pork Chow Mein or Chop Suey",
+                    "priceSm": "6.95",
+                    "priceLg": "9.95"
+                },
+                {
+                    "code": "106",
+                    "name": "White Meat Chicken Chow Mein or Chop Suey",
+                    "priceSm": "6.95",
+                    "priceLg": "9.95"
+                },
+                {
+                    "code": "107",
+                    "name": "Vegetable Chow Mein or Chop Suey",
+                    "priceSm": "6.95",
+                    "priceLg": "9.95"
+                },
+                {
+                    "code": "108",
+                    "name": "Shrimp Chow Mein or Chop Suey",
+                    "priceSm": "7.95",
+                    "priceLg": "10.95"
+                },
+                {
+                    "code": "109",
+                    "name": "Beef Chow Mein or Chop Suey",
+                    "priceSm": "7.95",
+                    "priceLg": "10.95"
+                },
+                {
+                    "code": "110",
+                    "name": "House Special Chow Mein or Chop Suey",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                }
+            ]
+        },
+        {
+            "name": "Pad Thai",
+            "note": "Thai Style Noodles",
+            "items": [
+                { "code": "111", "name": "Chicken Pad Thai", "price": "9.95" },
+                {
+                    "code": "112",
+                    "name": "Roast Pork Pad Thai",
+                    "price": "9.95"
+                },
+                { "code": "113", "name": "Beef Pad Thai", "price": "10.95" },
+                { "code": "114", "name": "Shrimp Pad Thai", "price": "10.95" },
+                {
+                    "code": "115",
+                    "name": "House Special Pad Thai",
+                    "price": "11.95"
+                },
+                { "code": "116", "name": "Vegetable Pad Thai", "price": "9.95" }
+            ]
+        },
+        {
+            "name": "Lo Mein",
+            "items": [
+                {
+                    "code": "117",
+                    "name": "Roast Pork Lo Mein",
+                    "priceSm": "6.95",
+                    "priceLg": "9.95"
+                },
+                {
+                    "code": "118",
+                    "name": "Chicken Lo Mein",
+                    "priceSm": "6.95",
+                    "priceLg": "9.95"
+                },
+                {
+                    "code": "119",
+                    "name": "Vegetable Lo Mein",
+                    "priceSm": "6.95",
+                    "priceLg": "9.95"
+                },
+                {
+                    "code": "120",
+                    "name": "Shrimp Lo Mein",
+                    "priceSm": "7.95",
+                    "priceLg": "10.95"
+                },
+                {
+                    "code": "121",
+                    "name": "Beef Lo Mein",
+                    "priceSm": "7.95",
+                    "priceLg": "10.95"
+                },
+                {
+                    "code": "122",
+                    "name": "House Special Lo Mein",
+                    "priceSm": "7.95",
+                    "priceLg": "11.95"
+                },
+                {
+                    "code": "123",
+                    "name": "Plain Lo Mein",
+                    "priceSm": "5.75",
+                    "priceLg": "7.95"
+                }
+            ]
+        },
+        {
+            "name": "Special Plater",
+            "note": "Pork Fried Rice or White Rice & Pork Egg Roll — Served All Day",
+            "items": [
+                {
+                    "code": "D1",
+                    "name": "Chow Mein",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D2",
+                    "name": "Lo Mein",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D3",
+                    "name": "Chop Suey",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D4",
+                    "name": "Egg Foo Young",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D5",
+                    "name": "Broccoli",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D6",
+                    "name": "Chinese Vegetables",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D7",
+                    "name": "Snow Peas",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "10.75"
+                },
+                {
+                    "code": "D8",
+                    "name": "Bean Sprout",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D9",
+                    "name": "Black Bean Sauce",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D10",
+                    "name": "Oyster Sauce",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D11",
+                    "name": "Pepper Steak w. Onion",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D12",
+                    "name": "Shrimp w. Lobster Sauce",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D13",
+                    "name": "B.B.Q. or Boneless Spare Ribs",
+                    "price": "10.75"
+                },
+                { "code": "D14", "name": "Mixed Vegetables", "price": "9.95" },
+                {
+                    "code": "D15",
+                    "name": "Kung Po",
+                    "detail": "Chicken or shrimp",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "D16",
+                    "name": "Garlic Sauce",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "D17",
+                    "name": "Hunan Style",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "D18",
+                    "name": "Szechuan Style",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "D19",
+                    "name": "Cashew Nuts",
+                    "detail": "Chicken or shrimp",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D20",
+                    "name": "Sweet & Sour",
+                    "detail": "Pork or chicken",
+                    "price": "9.95"
+                },
+                {
+                    "code": "D21",
+                    "name": "Shrimp w. Chili Sauce",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "D22",
+                    "name": "Orange Flavor Chicken",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "D23",
+                    "name": "General Tso's Chicken or Sesame Chicken",
+                    "spicy": true,
+                    "price": "9.95"
+                },
+                {
+                    "code": "D24",
+                    "name": "Broccoli w. Bean Curd",
+                    "price": "9.95"
+                },
+                { "code": "D25", "name": "Moo Goo Gai Pan", "price": "9.95" },
+                { "code": "D26", "name": "Bourbon Chicken", "price": "9.95" }
+            ]
+        },
+        {
+            "name": "Chow Mai Fun or Ho Fun",
+            "note": "Per Order",
+            "items": [
+                {
+                    "code": "1",
+                    "name": "Roast Pork Chow Mai Fun or Ho Fun",
+                    "price": "9.95"
+                },
+                {
+                    "code": "2",
+                    "name": "Chicken Chow Mai Fun or Ho Fun",
+                    "price": "9.95"
+                },
+                {
+                    "code": "3",
+                    "name": "Shrimp Chow Mai Fun or Ho Fun",
+                    "price": "10.95"
+                },
+                {
+                    "code": "4",
+                    "name": "Beef Chow Mai Fun or Ho Fun",
+                    "price": "10.95"
+                },
+                {
+                    "code": "5",
+                    "name": "Vegetable Chow Mai Fun or Ho Fun",
+                    "price": "10.95"
+                },
+                {
+                    "code": "6",
+                    "name": "House Special Chow Mai Fun or Ho Fun",
+                    "price": "11.95"
+                },
+                {
+                    "code": "7",
+                    "name": "Singapore Rice Noodle (w. Curry)",
+                    "price": "11.95"
+                }
+            ]
+        },
+        {
+            "name": "Lunch Special",
+            "note": "Served 11:00 am – 3:00 pm (Except Sunday & Holiday) · pork fried rice or white rice w. wonton soup, egg drop soup, or a soda",
+            "items": [
+                {
+                    "code": "L1",
+                    "name": "Chow Mein",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "8.25"
+                },
+                {
+                    "code": "L2",
+                    "name": "Lo Mein",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "8.25"
+                },
+                {
+                    "code": "L3",
+                    "name": "Chop Suey",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "8.25"
+                },
+                {
+                    "code": "L4",
+                    "name": "Egg Foo Young",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "8.25"
+                },
+                {
+                    "code": "L5",
+                    "name": "Broccoli",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "8.55"
+                },
+                {
+                    "code": "L6",
+                    "name": "Chinese Vegetables",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "8.25"
+                },
+                {
+                    "code": "L7",
+                    "name": "Snow Peas",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "8.95"
+                },
+                {
+                    "code": "L8",
+                    "name": "Bean Sprout",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "8.25"
+                },
+                {
+                    "code": "L9",
+                    "name": "Black Bean Sauce",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "price": "8.25"
+                },
+                {
+                    "code": "L10",
+                    "name": "Hunan",
+                    "detail": "Chicken or pork",
+                    "spicy": true,
+                    "price": "8.25"
+                },
+                {
+                    "code": "L11",
+                    "name": "Pepper Steak w. Onion",
+                    "price": "8.95"
+                },
+                {
+                    "code": "L12",
+                    "name": "Shrimp w. Lobster Sauce",
+                    "price": "8.55"
+                },
+                { "code": "L13", "name": "Boneless Ribs", "price": "8.95" },
+                { "code": "L14", "name": "Mixed Vegetables", "price": "8.25" },
+                {
+                    "code": "L15",
+                    "name": "Kung Po",
+                    "detail": "Chicken or shrimp",
+                    "spicy": true,
+                    "price": "8.25"
+                },
+                {
+                    "code": "L16",
+                    "name": "Garlic Sauce",
+                    "detail": "Chicken, pork, beef or shrimp",
+                    "spicy": true,
+                    "price": "8.95"
+                },
+                {
+                    "code": "L17",
+                    "name": "Hunan",
+                    "detail": "Beef or shrimp",
+                    "spicy": true,
+                    "price": "8.55"
+                },
+                {
+                    "code": "L18",
+                    "name": "Szechuan Style",
+                    "detail": "Beef or shrimp",
+                    "spicy": true,
+                    "price": "8.55"
+                },
+                {
+                    "code": "L19",
+                    "name": "Cashew Nuts",
+                    "detail": "Chicken or shrimp",
+                    "price": "8.75"
+                },
+                {
+                    "code": "L20",
+                    "name": "Sweet & Sour",
+                    "detail": "Pork or chicken",
+                    "price": "8.55"
+                },
+                {
+                    "code": "L21",
+                    "name": "Shrimp w. Chili Sauce",
+                    "spicy": true,
+                    "price": "8.75"
+                },
+                {
+                    "code": "L22",
+                    "name": "Orange Flavor Chicken",
+                    "spicy": true,
+                    "price": "8.75"
+                },
+                {
+                    "code": "L23",
+                    "name": "General Tso's or Sesame Chicken",
+                    "spicy": true,
+                    "price": "8.75"
+                },
+                { "code": "L24", "name": "Moo Goo Gai Pan", "price": "8.25" },
+                {
+                    "code": "L25",
+                    "name": "Szechuan Style Chicken or Pork",
+                    "spicy": true,
+                    "price": "8.25"
+                }
+            ]
+        },
+        {
+            "name": "Party Special",
+            "note": "Special pricing, before tax",
+            "items": [
+                { "name": "Fried Chicken Wing", "price": "32.00" },
+                { "name": "Krab Meat Rangoon 36 pcs", "price": "30.00" },
+                { "name": "Pork Fried Rice", "price": "37.00" },
+                { "name": "Shrimp Lo Mein", "price": "42.00" },
+                { "name": "Sweet & Sour Chicken", "price": "42.00" },
+                { "name": "Shrimp w. Broccoli", "price": "53.80" },
+                { "name": "Chicken w. Broccoli", "price": "42.00" },
+                { "name": "Black Bean w. Tofu", "price": "38.00" },
+                { "name": "General Tso's Chicken", "price": "43.00" },
+                {
+                    "name": "Orange Chicken 5 Qt.",
+                    "spicy": true,
+                    "price": "43.00"
+                },
+                { "name": "Golden Sesame Chicken", "price": "43.00" }
+            ]
+        }
+    ]
+}

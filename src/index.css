@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+
+@theme {
+    /* Base font (matches China Chef Pink.dc.html body font stack) */
+    --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    /* Brand */
+    --color-brand: #c1272d; /* primary red */
+    --color-brand-dark: #9c1d22; /* red hover */
+    --color-brand-deep: #8c2f2a; /* darker warm-red accent (Hero em, Value lunch label, Navbar phone hover) */
+    --color-gold: #f7e9c8; /* logo/icon foreground */
+
+    /* Text / neutrals */
+    --color-ink: #221e1a; /* body text */
+    --color-ink-strong: #1c1814; /* headings */
+    --color-ink-soft: #7a7264; /* secondary text on light bg */
+    --color-muted: #5a5249;
+    --color-subtle: #7a7264;
+
+    /* Light surfaces */
+    --color-cream: #fbeae8; /* page + nav pink bg */
+    --color-line: #eedfda; /* borders EAD2CE EEDFDA EFE3E0*/
+    --color-blush: #fbe3e0; /* light pink chip bg */
+
+    /* Buttons / controls */
+    --color-btn-border: #c9bfad; /* Hero secondary (Call) button border */
+
+    /* Dark ("Our Story") surface */
+    --color-maroon: #3a1513; /* dark section bg */
+    --color-parchment: #fbf4e6; /* headings on dark */
+    --color-cream-muted: #cfc5b5; /* body text on dark */
+    --color-rose: #e0a39c; /* eyebrow on dark */
+
+    /* Menu section */
+    --color-menu-bg: #f3d0cc; /* menu section background */
+    --color-quickinfo-bg: #f2d0ca; /* quick info band background */
+    --color-dish-name: #2a2420; /* menu item name text */
+    --color-text-strong: #3a332d; /* nav links, strong inline text */
+    --color-menu-desc: #655d53; /* menu section intro/description text */
+    --color-menu-item-border: #f0dad7; /* menu item row bottom border */
+    --color-price-leader: #d8bbb6; /* dotted price leader border color */
+    --color-divider: #ebd3cf; /* category header divider line */
+    --color-diet-box-border: #f0cdc9; /* diet menu callout box border */
+    --color-diet-text: #5b4944; /* diet menu section text */
+    --color-diet-border: #efd3cf; /* diet menu item bottom border */
+    --color-diet-dotted: #d8b8b1; /* diet menu dotted price leader */
+    --color-divider-rose: #c99a94; /* Value lunch-window label hairline dividers */
+    --color-special-panel: #fbefec; /* Value specials-card dish-grid panel bg */
+    --color-note-warm: #7a5b56; /* Value special-note strip text */
+
+    --color-availability-bg: #fce9e6; /* Value specials card availability strip bg */
+    --color-chip-border: #e9cdc9; /* menu chip / control borders */
+    --color-header-hover: #fdf3f1; /* category header hover/open bg */
+    --color-divider-soft: #f4dedb; /* Visit dividers + chevron badge bg */
+    --color-input-border: #e0bdb8; /* search input + spicy-off border */
+    --color-chili: #c0392b; /* spicy indicator dot (distinct from brand) */
+    --color-icon-muted: #7e7566; /* search glyphs */
+    --color-warm-gray: #4a4239; /* chip text / spicy-off text */
+    --color-code-muted: #746d60; /* dish code number */
+    --color-detail-muted: #746d61; /* dish detail text */
+    --color-helper-muted: #645d53; /* "Tap a section" helper text */
+    --color-sticky-border: #ead2ce; /* sticky filter-bar bottom border */
+    --color-badge-gold-bg: #fbf0d8; /* "Best Seller" badge bg */
+    --color-badge-gold-text: #7e631c; /* "Best Seller" badge text */
+    --color-badge-rose-bg: #fbe7e1; /* "Popular" badge bg */
+    --color-badge-rose-text: #b4432b; /* "Popular" badge text */
+
+    --color-success: #4d8c57;
+    --color-status-closed: #b0655f; /* closed-status dot */
+    --color-status-soon: #d98a1f; /* closing-soon-status dot */
+    --color-badge-status-bg-open: #e7f1e8; /* Hours "Open" badge bg */
+    --color-badge-status-bg-soon: #fbf0dd; /* Hours "Closing Soon" badge bg */
+    --color-badge-status-bg: #f7e0dc; /* Hours "Closed" badge bg */
+    --color-badge-status-text-open: #2e6b3c; /* Hours "Open" badge text */
+    --color-badge-status-text-soon: #8a5a12; /* Hours "Closing Soon" badge */
+    --color-badge-status-text: #9c3a32; /* Hours "Closed" badge text */
+
+    /* Footer */
+    --color-footer-muted: #9c9387; /* footer intro paragraph text */
+    --color-footer-border: #2a2420; /* footer nav list bottom border */
+
+    /* Shadows (brand red at varying alpha) */
+    --shadow-logo: 0 2px 6px rgba(193, 39, 45, 0.25);
+    --shadow-card: 0 26px 54px -36px rgba(193, 39, 45, 0.4);
+    --shadow-specials-card: 0 24px 50px -32px rgba(193, 39, 45, 0.4);
+    --shadow-badge: 0 10px 30px -8px rgba(193, 39, 45, 0.5);
+    --shadow-input: 0 6px 18px -8px rgba(193, 39, 45, 0.28);
+    --shadow-input-focus: 0 8px 22px -8px rgba(193, 39, 45, 0.4);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: var(--color-cream);
+}
+::selection {
+    background: var(--color-brand);
+    color: #fff;
+}
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+}
