@@ -274,3 +274,14 @@ input[type='search']::-ms-clear {
         animation-name: gentle-pulse-opacity;
     }
 }
+/*
+ * iOS Safari rebuilds compositing layers under a sticky + backdrop-filter
+ * element on every scroll frame, which resets any infinite CSS animation
+ * caught in that repaint — the spicy dot's opacity keyframe restarts
+ * mid-cycle and flashes to near-invisible. Promoting the dot to its own
+ * layer keeps it out of that repaint chain.
+ */
+.animate-spicy-pulse {
+    will-change: opacity, transform;
+    transform: translateZ(0);
+}

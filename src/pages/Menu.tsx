@@ -560,7 +560,8 @@ function Menu() {
                     ref={stickyBarRef}
                     className="sticky top-[69px] z-30
                         bg-menu-bg/[0.94] backdrop-blur-[8px]
-                        backdrop-saturate-[1.4] border-b border-sticky-border"
+                        backdrop-saturate-[1.4] border-b border-sticky-border
+                        [contain:paint]"
                 >
                     <div className="max-w-[1120px] mx-auto pt-[14px] px-6">
                         <div className="flex flex-wrap gap-3 items-center">
