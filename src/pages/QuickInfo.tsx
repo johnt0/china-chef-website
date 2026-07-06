@@ -33,7 +33,8 @@ function QuickInfo() {
     const status = getHoursStatus();
     const { bg, dot, text, word } = STATUS_STYLES[status];
     const message = getHoursMessage();
-    const reveal = useReveal<HTMLDivElement>();
+    const { ref: revealRef, className: revealClass } =
+        useReveal<HTMLDivElement>();
 
     return (
         <section className="bg-quickinfo-bg">
@@ -42,10 +43,10 @@ function QuickInfo() {
                     pb-[clamp(40px,5vw,56px)]"
             >
                 <div
-                    ref={reveal.ref}
+                    ref={revealRef}
                     className={`max-w-[640px] mx-auto bg-white border
                         border-line rounded-[14px] overflow-hidden
-                        shadow-specials-card ${reveal.className}`}
+                        shadow-specials-card ${revealClass}`}
                 >
                     <div
                         className="p-[clamp(24px,3vw,32px)] flex flex-col

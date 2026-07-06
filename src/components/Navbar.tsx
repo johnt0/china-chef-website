@@ -11,12 +11,14 @@ const MENU_TRANSITION_MS = 280;
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [renderMenu, setRenderMenu] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
     const [animateIn, setAnimateIn] = useState(false);
+    const renderMenu = menuOpen || isClosing;
     const active = useActiveSection(navRoutes);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
     const firstMobileLinkRef = useRef<HTMLAnchorElement>(null);
     const headerRef = useRef<HTMLElement>(null);
+    const hasOpenedRef = useRef(false);
     const [headerHeight, setHeaderHeight] = useState(0);
 
     useEffect(() => {
@@ -29,16 +31,25 @@ function Navbar() {
 
     useEffect(() => {
         if (menuOpen) {
-            setRenderMenu(true);
+            hasOpenedRef.current = true;
             const raf = requestAnimationFrame(() => setAnimateIn(true));
             return () => cancelAnimationFrame(raf);
         }
-        setAnimateIn(false);
+        if (!hasOpenedRef.current) return;
+        let cancelled = false;
+        queueMicrotask(() => {
+            if (cancelled) return;
+            setAnimateIn(false);
+            setIsClosing(true);
+        });
         const timeout = window.setTimeout(
-            () => setRenderMenu(false),
+            () => setIsClosing(false),
             MENU_TRANSITION_MS,
         );
-        return () => window.clearTimeout(timeout);
+        return () => {
+            cancelled = true;
+            window.clearTimeout(timeout);
+        };
     }, [menuOpen]);
 
     const navigateToSection = (
@@ -68,6 +79,7 @@ function Navbar() {
     useEffect(() => {
         if (!renderMenu) return;
         const prev = document.body.style.overflow;
+        const menuButton = menuButtonRef.current;
         document.body.style.overflow = 'hidden';
         firstMobileLinkRef.current?.focus();
         const onKey = (e: KeyboardEvent) =>
@@ -76,7 +88,7 @@ function Navbar() {
         return () => {
             document.body.style.overflow = prev;
             document.removeEventListener('keydown', onKey);
-            menuButtonRef.current?.focus();
+            menuButton?.focus();
         };
     }, [renderMenu]);
 

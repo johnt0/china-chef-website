@@ -1,4 +1,4 @@
-import {Phone} from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { scrollToElement } from '../utils/smoothScroll';
 
 function Hero() {
@@ -62,18 +62,16 @@ function Hero() {
                     week for pickup and delivery.
                 </p>
                 <div className="flex flex-wrap gap-[14px] justify-center">
-                    
                     <address className="contents not-italic">
-                        
                         <a
-                        href="tel:+14108821088"
-                        className="inline-flex items-center gap-[10px]
+                            href="tel:+14108821088"
+                            className="inline-flex items-center gap-[10px]
                             bg-brand text-white px-8 py-4 rounded no-underline
                             text-[15.5px] font-medium shadow-btn btn-press
                             hover:bg-brand-deep"
                         >
-                        <Phone size={16}/>
-                        Call to Order
+                            <Phone size={16} />
+                            Call to Order
                         </a>
                         <a
                             href="#menu"

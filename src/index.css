@@ -95,7 +95,8 @@
 
     /* Animations */
     --animate-acc-height: acc-height 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
-    --animate-acc-fade-up: acc-fade-up 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+    --animate-acc-fade-up: acc-fade-up 0.4s cubic-bezier(0.22, 0.61, 0.36, 1)
+        both;
     --animate-dish-in: dish-in 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) both;
     --animate-spicy-pulse: gentle-pulse 3s ease-in-out infinite;
 

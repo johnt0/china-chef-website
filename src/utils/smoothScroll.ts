@@ -53,6 +53,7 @@ export function animateScrollTo(targetY: number) {
 
 export function scrollToElement(target: Element | null, offset = 0) {
     if (!target) return;
-    const targetY = target.getBoundingClientRect().top + window.scrollY - offset;
+    const targetY =
+        target.getBoundingClientRect().top + window.scrollY - offset;
     animateScrollTo(targetY);
 }

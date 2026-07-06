@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import menuData from '../data/menu.json';
-import { priceOf, type Dish, type Category, type MenuData } from '../data/menuHelpers';
+import {
+    priceOf,
+    type Dish,
+    type Category,
+    type MenuData,
+} from '../data/menuHelpers';
 import { useReveal } from '../hooks/useReveal';
 
 const data = menuData as MenuData;
@@ -38,8 +43,10 @@ function displayItem(item: Dish): DisplayItem {
 
 function Value() {
     const [special, setSpecial] = useState<'lunch' | 'platter' | null>(null);
-    const intro = useReveal<HTMLDivElement>();
-    const specialsCard = useReveal<HTMLDivElement>(60);
+    const { ref: introRef, className: introClass } =
+        useReveal<HTMLDivElement>();
+    const { ref: specialsCardRef, className: specialsCardClass } =
+        useReveal<HTMLDivElement>(60);
 
     const now = new Date();
     const h = now.getHours() + now.getMinutes() / 60;
@@ -78,9 +85,9 @@ function Value() {
             >
                 {/* Intro text */}
                 <div
-                    ref={intro.ref}
+                    ref={introRef}
                     className={`text-center max-w-[40em] m-[0_auto_32px]
-                        ${intro.className}`}
+                        ${introClass}`}
                 >
                     {/* Eyebrow label */}
                     <div
@@ -131,11 +138,11 @@ function Value() {
                 </div>
                 {/* Specials card */}
                 <div
-                    ref={specialsCard.ref}
+                    ref={specialsCardRef}
                     className={`
                         bg-white border border-line rounded-[14px]
                         shadow-specials-card overflow-hidden
-                        ${specialsCard.className}
+                        ${specialsCardClass}
                     `}
                 >
                     {/* Header row: tabs + spicy legend */}
@@ -191,7 +198,9 @@ function Value() {
                                 text-ink-soft
                             `}
                         >
-                            <span className="text-chili text-[12px] animate-spicy-pulse">●</span>{' '}
+                            <span className="text-chili text-[12px] animate-spicy-pulse">
+                                ●
+                            </span>{' '}
                             indicates a spicy dish
                         </div>
                     </div>
