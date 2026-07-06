@@ -1235,8 +1235,16 @@
                     "name": "Shrimp w. Lobster Sauce",
                     "price": "8.55"
                 },
-                { "code": "L13", "name": "Boneless Ribs", "price": "8.95" },
-                { "code": "L14", "name": "Mixed Vegetables", "price": "8.25" },
+                {
+                  "code": "L13",
+                  "name": "Boneless Ribs",
+                  "price": "8.95"
+                },
+                {
+                  "code": "L14",
+                  "name": "Mixed Vegetables",
+                  "price": "8.25"
+                },
                 {
                     "code": "L15",
                     "name": "Kung Po",

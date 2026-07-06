@@ -1,6 +1,19 @@
 import {Phone} from 'lucide-react';
+import { scrollToElement } from '../utils/smoothScroll';
 
 function Hero() {
+    const navigateToMenu = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        const isModifiedClick =
+            e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey;
+        if (isModifiedClick) return;
+        e.preventDefault();
+
+        const header = document.querySelector('header');
+        const headerHeight = header?.getBoundingClientRect().height ?? 0;
+        scrollToElement(document.getElementById('menu'), headerHeight + 16);
+        history.pushState(null, '', '#menu');
+    };
+
     return (
         <section
             id="top"
@@ -64,6 +77,7 @@ function Hero() {
                         </a>
                         <a
                             href="#menu"
+                            onClick={navigateToMenu}
                             className="inline-flex items-center gap-[10px]
                                 bg-transparent text-ink px-8 py-4 rounded
                                 no-underline text-[15.5px] font-medium

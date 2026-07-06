@@ -254,14 +254,13 @@ input[type='search']::-ms-clear {
     height: 2px;
     background: var(--color-brand);
     transform: scaleX(0);
-    transform-origin: right;
+    transform-origin: left;
     transition: transform 300ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 .link-underline:hover::after,
 .link-underline:focus-visible::after,
 .link-underline[aria-current='true']::after {
     transform: scaleX(1);
-    transform-origin: left;
 }
 @media (prefers-reduced-motion: reduce) {
     .link-underline::after {
